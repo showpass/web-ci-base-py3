@@ -2,5 +2,5 @@
 
 > Docker image for running Django tests on CircleCI
 
-Simple Docker image built on [docker-python-django](https://github.com/showpass/docker-python-django) to speed up
+Simple Docker image built on [docker-python3-django](https://github.com/showpass/docker-python3-django) to speed up
 Django-based unit tests on CircleCI. Installs additional tools needed for running tests. 
