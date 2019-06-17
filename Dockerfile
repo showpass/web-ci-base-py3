@@ -2,7 +2,7 @@ FROM showpass/python3-django
 
 RUN apk update
 # CircleCI
-RUN apk --no-cache add git tar gzip openssl openssh-client nodejs
+RUN apk --no-cache add git tar gzip openssl openssh-client nodejs npm
 
 # NPM dependencies
 RUN npm install -g gulp \
