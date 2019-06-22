@@ -2,7 +2,9 @@ FROM showpass/python3-django
 
 RUN apk update
 # CircleCI
-RUN apk --no-cache add git tar gzip openssl openssh-client nodejs npm
+RUN apk --no-cache add git tar gzip openssl openssh-client
+RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.6/main/ nodejs=6.10.3-r2
+RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.6/main/ nodejs-npm=6.10.3-r2
 
 # NPM dependencies
 RUN npm install -g gulp \
