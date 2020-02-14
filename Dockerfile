@@ -1,10 +1,8 @@
-FROM showpass/python3-django
+FROM showpass/docker-python3-django-channels2
 
 RUN apk update
 # CircleCI
 RUN apk --no-cache add git tar gzip openssl openssh-client
-RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.6/main/ nodejs=6.10.3-r2
-RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.6/main/ nodejs-npm=6.10.3-r2
 
 # NPM dependencies
 RUN npm install -g gulp \
